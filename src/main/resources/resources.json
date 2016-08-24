@@ -4,66 +4,66 @@
 			"uri": "home",
 			"name": "Dashboard",
 			"css": "zmdi zmdi-home",
-			"type": "MENU",
+			"type": "menu",
 			"excepted": true
 		},
 		{
-			"uri": "system",
-			"name": "User Management",
+			"uri": "auth",
+			"name": "Authority Management",
 			"css": "zmdi zmdi-account",
-			"type": "ACCORDION",
+			"type": "accordion",
 			"nodes": [
 				{
-					"uri": "system.user",
+					"uri": "auth.user",
 					"name": "User",
-					"type": "MENU",
+					"type": "menu",
 					"nodes": [
 						{
-							"uri": "system.user.view",
+							"uri": "auth.user.view",
 							"name": "View",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.user.new",
+							"uri": "auth.user.new",
 							"name": "New",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.user.update",
+							"uri": "auth.user.update",
 							"name": "Update",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.user.delete",
+							"uri": "auth.user.delete",
 							"name": "Delete",
-							"type": "BUTTON"
+							"type": "button"
 						}
 					]
 				},
 				{
-					"uri": "system.role",
+					"uri": "auth.role",
 					"name": "Role",
-					"type": "MENU",
+					"type": "menu",
 					"nodes": [
 						{
-							"uri": "system.role.view",
+							"uri": "auth.role.view",
 							"name": "View",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.role.new",
+							"uri": "auth.role.new",
 							"name": "New",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.role.update",
+							"uri": "auth.role.update",
 							"name": "Update",
-							"type": "BUTTON"
+							"type": "button"
 						},
 						{
-							"uri": "system.role.delete",
+							"uri": "auth.role.delete",
 							"name": "Delete",
-							"type": "BUTTON"
+							"type": "button"
 						}
 					]
 				}

@@ -5,9 +5,24 @@ materialAdmin
 			$stateProvider
 
 					// ------------------------------
+					// Authority Management
+					// ------------------------------
+					.state('auth', {
+						url : '/auth',
+						templateUrl : 'views/common.html'
+					})
+					.state('auth.user', {
+						url : '/user',
+						templateUrl : 'views/generic/auth/user.html'
+					})
+					.state('auth.role', {
+						url : '/role',
+						templateUrl : 'views/generic/auth/role.html'
+					})
+
+					// ------------------------------
 					// HOME
 					// ------------------------------
-
 					.state(
 							'home',
 							{
