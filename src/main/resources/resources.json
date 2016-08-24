@@ -1,0 +1,73 @@
+{
+	"nodes": [
+		{
+			"uri": "home",
+			"name": "Dashboard",
+			"css": "zmdi zmdi-home",
+			"type": "MENU",
+			"excepted": true
+		},
+		{
+			"uri": "system",
+			"name": "User Management",
+			"css": "zmdi zmdi-account",
+			"type": "ACCORDION",
+			"nodes": [
+				{
+					"uri": "system.user",
+					"name": "User",
+					"type": "MENU",
+					"nodes": [
+						{
+							"uri": "system.user.view",
+							"name": "View",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.user.new",
+							"name": "New",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.user.update",
+							"name": "Update",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.user.delete",
+							"name": "Delete",
+							"type": "BUTTON"
+						}
+					]
+				},
+				{
+					"uri": "system.role",
+					"name": "Role",
+					"type": "MENU",
+					"nodes": [
+						{
+							"uri": "system.role.view",
+							"name": "View",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.role.new",
+							"name": "New",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.role.update",
+							"name": "Update",
+							"type": "BUTTON"
+						},
+						{
+							"uri": "system.role.delete",
+							"name": "Delete",
+							"type": "BUTTON"
+						}
+					]
+				}
+			]
+		}
+	]
+}
