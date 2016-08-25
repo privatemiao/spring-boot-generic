@@ -3,6 +3,10 @@ package org.mel.security.dto;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class SecurityRoleUpdateRequest extends SecurityRoleCreateRequest {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Long id;
 
 	public SecurityRoleUpdateRequest() {

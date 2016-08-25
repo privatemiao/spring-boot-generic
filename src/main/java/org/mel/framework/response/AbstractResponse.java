@@ -21,6 +21,13 @@ public abstract class AbstractResponse {
 			public boolean isSuccess() {
 				return status;
 			}
+
+			@Override
+			public String getMessage() {
+				return "Operation succed!";
+			}
+			
+			
 		};
 	}
 

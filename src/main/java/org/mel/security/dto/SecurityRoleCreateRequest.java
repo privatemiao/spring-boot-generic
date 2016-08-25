@@ -6,6 +6,10 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.mel.framework.request.AbstractRequest;
 
 public class SecurityRoleCreateRequest extends AbstractRequest {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private String description;
 	private Set<Long> rightIds;
