@@ -18,34 +18,24 @@
 		</ul>
 	</div>
 
+
+	<ul class="main-menu">
+		<li data-ng-if="menu.type === 'MENU'" data-ui-sref-active="active" data-ng-repeat="menu in menus"><a data-ui-sref="{{menu.uri}}" data-ng-click="mactrl.sidebarStat($event)"><i
+				class="{{menu.css}}"></i> {{menu.name}}</a></li>
+
+		<li data-ng-if="menu.type === 'ACCORDION'" class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('{{menu.uri}}') }" data-ng-repeat="menu in menus"><a href="" toggle-submenu><i
+				class="{{menu.css}}"></i> {{menu.name}}</a>
+			<ul>
+				<li data-ng-repeat="node in menu.nodes"><a data-ui-sref-active="active" data-ui-sref="{{node.uri}}" data-ng-click="mactrl.sidebarStat($event)">{{node.name}}</a></li>
+			</ul></li>
+	</ul>
+
+
+
+
 	<ul class="main-menu">
 
 		<li data-ui-sref-active="active"><a data-ui-sref="home" data-ng-click="mactrl.sidebarStat($event)"><i class="zmdi zmdi-home"></i> Home</a></li>
-
-
-
-
-
-
-
-
-
-		<li class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('auth') }"><a href="" toggle-submenu><i class="zmdi zmdi-account"></i> Authority Management</a>
-			<ul>
-				<li><a data-ui-sref-active="active" data-ui-sref="auth.user" data-ng-click="mactrl.sidebarStat($event)">User</a></li>
-				<li><a data-ui-sref-active="active" data-ui-sref="auth.role" data-ng-click="mactrl.sidebarStat($event)">Role</a></li>
-			</ul></li>
-
-
-
-
-
-
-
-
-
-
-
 		<li class="sub-menu" data-ng-class="{ 'active toggled': mactrl.$state.includes('headers') }"><a href="" toggle-submenu><i class="zmdi zmdi-view-compact"></i> Headers</a>
 
 			<ul>
