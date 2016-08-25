@@ -4,66 +4,66 @@
 			"uri": "home",
 			"name": "Dashboard",
 			"css": "zmdi zmdi-home",
-			"type": "menu",
+			"type": "MENU",
 			"excepted": true
 		},
 		{
 			"uri": "auth",
 			"name": "Authority Management",
 			"css": "zmdi zmdi-account",
-			"type": "accordion",
+			"type": "ACCORDION",
 			"nodes": [
 				{
 					"uri": "auth.user",
 					"name": "User",
-					"type": "menu",
+					"type": "MENU",
 					"nodes": [
 						{
 							"uri": "auth.user.view",
 							"name": "View",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.user.new",
 							"name": "New",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.user.update",
 							"name": "Update",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.user.delete",
 							"name": "Delete",
-							"type": "button"
+							"type": "BUTTON"
 						}
 					]
 				},
 				{
 					"uri": "auth.role",
 					"name": "Role",
-					"type": "menu",
+					"type": "MENU",
 					"nodes": [
 						{
 							"uri": "auth.role.view",
 							"name": "View",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.role.new",
 							"name": "New",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.role.update",
 							"name": "Update",
-							"type": "button"
+							"type": "BUTTON"
 						},
 						{
 							"uri": "auth.role.delete",
 							"name": "Delete",
-							"type": "button"
+							"type": "BUTTON"
 						}
 					]
 				}
