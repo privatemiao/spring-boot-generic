@@ -1,0 +1,25 @@
+{
+  "name": "generic-html",
+  "description": "HTML of Generic System",
+  "main": "",
+  "authors": [
+    "Mel Liu <privatemiao@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "generic"
+  ],
+  "homepage": "https://github.com/privatemiao/spring-boot-generic",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap-nav-tree": "*",
+    "angular-ui-tree": "^2.17.0"
+  }
+}
