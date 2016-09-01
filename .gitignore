@@ -3,3 +3,5 @@
 target
 classes
 .classpath
+html/vendors/bower_components
+html/vendors/bower_components/*
