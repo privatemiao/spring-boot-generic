@@ -23,7 +23,7 @@ materialAdmin.controller('RoleController', function($scope, UserService) {
 					node.text = node.name;
 					node.item = node.nodes;
 					if (node.type === 'BUTTON'){
-						node.im0 = node.im1 = node.im2 = 'lock.gif';
+						node.im0 = node.im1 = node.im2 = node.css + '.gif';
 						console.log(node);
 					}
 					

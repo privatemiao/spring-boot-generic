@@ -21,22 +21,26 @@
 						{
 							"uri": "auth.user.view",
 							"name": "View",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "view"
 						},
 						{
 							"uri": "auth.user.new",
 							"name": "New",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "new"
 						},
 						{
 							"uri": "auth.user.update",
 							"name": "Update",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "update"
 						},
 						{
 							"uri": "auth.user.delete",
 							"name": "Delete",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "delete"
 						}
 					]
 				},
@@ -48,22 +52,26 @@
 						{
 							"uri": "auth.role.view",
 							"name": "View",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "view"
 						},
 						{
 							"uri": "auth.role.new",
 							"name": "New",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "new"
 						},
 						{
 							"uri": "auth.role.update",
 							"name": "Update",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "update"
 						},
 						{
 							"uri": "auth.role.delete",
 							"name": "Delete",
-							"type": "BUTTON"
+							"type": "BUTTON",
+							"css": "delete"
 						}
 					]
 				}
