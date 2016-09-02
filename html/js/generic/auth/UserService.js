@@ -6,13 +6,13 @@ materialAdmin.service('UserService', [ '$http', '$q', function($http, $q) {
 		getAllMenu : function() {
 			var deferred = $q.defer();
 			if (variables.allMenu) {
-				deferred.resolve(variables.allMenu);
+				deferred.resolve(angular.copy(variables.allMenu));
 			} else {
 				$http.get('generic/security/allmenu').then(function(response) {
-					if (response.data){
+					if (response.data) {
 						variables.allMenu = response.data.data;
 					}
-					deferred.resolve(variables.allMenu);
+					deferred.resolve(angular.copy(variables.allMenu));
 				}, function(error) {
 					deferred.reject(error);
 				});

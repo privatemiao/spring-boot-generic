@@ -14,7 +14,7 @@
     "tests"
   ],
   "dependencies": {
-    "angular-animate": "1.4.7",
+    "angular-animate": "~1.4.8",
     "angular-chosen-localytics": "~1.0.7",
     "angular-bootstrap": "~0.14.3",
     "angular-farbtastic": "*",
@@ -48,7 +48,6 @@
     "summernote": "~0.6.7",
     "sweetalert": "~1.0.1",
     "Waves": "waves#~0.7.4",
-    "angular": "1.4.7",
-    "ng-table": "*"
+    "angular": "1.4.7"
   }
 }

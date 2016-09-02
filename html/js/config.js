@@ -16,7 +16,20 @@ materialAdmin.config(function($stateProvider, $urlRouterProvider) {
 		url : '/role',
 		templateUrl : 'views/generic/auth/role.html',
 		controller : 'RoleController',
-		controllerAs : 'roleController'
+		controllerAs : 'roleController',
+		resolve : {
+			loadPlugin : function($ocLazyLoad) {
+				return $ocLazyLoad.load([ {
+					name : 'css',
+					insertBefore : '#app-level',
+					files : [ 'vendors/dhtmlxTree_v50_std/codebase/fonts/font_roboto/roboto.css', 'vendors/dhtmlxTree_v50_std/codebase/dhtmlxtree.css' ]
+				}, {
+					name : 'vendors',
+					insertBefore : '#app-level-js',
+					files : [ 'vendors/dhtmlxTree_v50_std/codebase/dhtmlxtree.js' ]
+				} ])
+			}
+		}
 	})
 
 	// ------------------------------

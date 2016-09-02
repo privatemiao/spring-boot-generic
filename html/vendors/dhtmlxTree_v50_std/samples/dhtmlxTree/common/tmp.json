@@ -1,0 +1,125 @@
+[
+	{
+		"css": "zmdi zmdi-home",
+		"excepted": true,
+		"type": "MENU",
+		"parentUri": "home",
+		"sequence": 1,
+		"id": "home",
+		"text": "Dashboard",
+		"item": []
+	},
+	{
+		"css": "zmdi zmdi-account",
+		"excepted": false,
+		"type": "ACCORDION",
+		"parentUri": "auth",
+		"sequence": 2,
+		"id": "auth",
+		"text": "Authority Management",
+		"item": [
+			{
+				"css": null,
+				"excepted": false,
+				"type": "MENU",
+				"parentUri": "auth",
+				"sequence": 1,
+				"id": "auth.user",
+				"text": "User",
+				"item": [
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.user",
+						"sequence": 1,
+						"id": "auth.user.view",
+						"text": "View",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.user",
+						"sequence": 2,
+						"id": "auth.user.new",
+						"text": "New",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.user",
+						"sequence": 3,
+						"id": "auth.user.update",
+						"text": "Update",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.user",
+						"sequence": 4,
+						"id": "auth.user.delete",
+						"text": "Delete",
+						"item": []
+					}
+				]
+			},
+			{
+				"css": null,
+				"excepted": false,
+				"type": "MENU",
+				"parentUri": "auth",
+				"sequence": 2,
+				"id": "auth.role",
+				"text": "Role",
+				"item": [
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.role",
+						"sequence": 1,
+						"id": "auth.role.view",
+						"text": "View",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.role",
+						"sequence": 2,
+						"id": "auth.role.new",
+						"text": "New",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.role",
+						"sequence": 3,
+						"id": "auth.role.update",
+						"text": "Update",
+						"item": []
+					},
+					{
+						"css": null,
+						"excepted": false,
+						"type": "BUTTON",
+						"parentUri": "auth.role",
+						"sequence": 4,
+						"id": "auth.role.delete",
+						"text": "Delete",
+						"item": []
+					}
+				]
+			}
+		]
+	}
+]
