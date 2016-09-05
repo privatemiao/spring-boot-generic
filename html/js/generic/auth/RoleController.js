@@ -1,26 +1,46 @@
 materialAdmin.controller('RoleController', function($scope, UserService) {
+	// 本地全局变量
 	var variables = {
-		// 从后台拿到的全部节点
 		ALL_NODES : [],
-		// 节点索引
-		NODE_INDEX : {}
+		NODE_INDEX : {},
+		nodeTree : undefined
 	};
 
-	// 本地服务类
+	// 本地全局服务对象
 	var service = {
+		indexNodes : function() {
+			var nodes = angular.copy(variables.ALL_NODES);
+			(function _parse(nodes) {
+				nodes.forEach(function(node) {
+					variables.NODE_INDEX[node.uri] = node;
+					if (node.nodes && node.nodes.length > 0) {
+						_parse(node.nodes);
+					}
+				});
+			})(nodes);
+		},
 
 	};
 
+	// 页面交互变量
 	$scope.variables = {
+		/* 页面操作类型 listRole, newRole, editRole */
+		operate : 'listRole',
 		/* 用户新增、变更角色的对象 */
 		role : {}
 	};
 
-	UserService.getAllMenu().then(function(response) {
-		console.log(response);
-	}, function(response) {
-		console.log("Error", response);
-	});
+	/*--------------------------------------------
+	 |       I  N  I  T  I  A  L  I  Z  E        |
+	 ============================================*/
+	(function() {
+		UserService.getAllMenu().then(function(response) {
+			variables.ALL_NODES = response;
+			service.indexNodes();
+		}, function(response) {
+			console.log("Error", response);
+		});
+	})();
 
 	// var nodeTree;
 	//
@@ -66,9 +86,12 @@ materialAdmin.controller('RoleController', function($scope, UserService) {
 	// console.log("Error", response);
 	// });
 	//
-	// $scope.$on('$destroy', function() {
-	// if (nodeTree && nodeTree.destructor) {
-	// nodeTree.destructor();
-	// }
-	// });
+	/*--------------------------------------------
+	 |            D  E  S  T  R  O  Y            |
+	 ============================================*/
+	$scope.$on('$destroy', function() {
+		if (variables.nodeTree && variables.nodeTree.destructor) {
+			variables.nodeTree.destructor();
+		}
+	});
 });

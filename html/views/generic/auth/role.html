@@ -7,26 +7,34 @@
 	<div class="card">
 		<div class="card-header">
 			<h2>
-				New Role <small></small>
+				Roles <small></small>
 			</h2>
 		</div>
 
-		<div class="card-body card-padding">
+		<!-- 角色列表，默认显示 -->
+		<div class="card-body card-padding" data-ng-show="variables.operate == 'listRole'">
+			
+		</div>
+
+		<!-- 新增、编辑角色 -->
+		<div class="card-body card-padding" data-ng-show="variables.operate != 'listRole'">
 
 			<div class="row">
 				<div class="col-sm-6">
 					<div class="form-group fg-float m-b-30">
 						<div class="fg-line fg-toggled">
-							<input type="text" class="input-sm form-control fg-input" data-ng-model = "variables.role.name"> <label class="fg-label">Role Name</label>
+							<input type="text" class="input-sm form-control fg-input" data-ng-model="variables.role.name"> <label class="fg-label">Role Name</label>
 						</div>
 					</div>
 					<div class="form-group fg-float m-b-30">
 						<div class="fg-line fg-toggled">
-							<input type="text" class="input-sm form-control fg-input" data-ng-model = "variables.role.description"> <label class="fg-label">Role Description</label>
+							<input type="text" class="input-sm form-control fg-input" data-ng-model="variables.role.description"> <label class="fg-label">Role Description</label>
 						</div>
 					</div>
 				</div>
-				<div class="col-sm-6"></div>
+				<div class="col-sm-6">
+					<div id="treeBox" style="width: 200; height: 200"></div>
+				</div>
 			</div>
 
 
