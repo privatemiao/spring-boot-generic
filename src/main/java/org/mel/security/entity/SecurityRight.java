@@ -7,6 +7,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.mel.framework.IDEntity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -83,7 +84,8 @@ public class SecurityRight extends IDEntity {
 
 	@Override
 	public String toString() {
-		return "SecurityRight [uri=" + uri + ", name=" + name + "]";
+		return ToStringBuilder.reflectionToString(this);
 	}
+
 
 }

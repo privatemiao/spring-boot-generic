@@ -43,13 +43,8 @@ public class SecurityService {
 		return resourceService.getAllMenus();
 	}
 
-	public void createSecurityRoleService(SecurityRoleCreateRequest request) {
+	private SecurityRole convertRequest2Entity(SecurityRoleCreateRequest request) {
 		SecurityRole securityRole = BeanMapper.map(request, SecurityRole.class);
-
-		if (securityRole.getId() != null) {
-			throw new IllegalArgumentException("Role.id should be null!");
-		}
-
 		Set<Long> rightIds = request.getRightIds();
 		Set<SecurityRight> securityRights = new HashSet<>();
 		Iterable<SecurityRight> securityRightEntities = securityRightDao.findAll(rightIds);
@@ -57,20 +52,34 @@ public class SecurityService {
 			securityRights.add(securityRight);
 		}
 		securityRole.setRights(securityRights);
-		logger.debug("Converted SecurityRole ->{}", securityRole);
-		securityRoleService.save(securityRole);
+		logger.debug("Converted SecurityRole -> {}", securityRole);
+		return securityRole;
+	}
+
+	public void createSecurityRoleService(SecurityRoleCreateRequest request) {
+		SecurityRole role = convertRequest2Entity(request);
+		if (role.getId() != null) {
+			logger.error("Argument Illegal {}.", role);
+			throw new IllegalArgumentException("Argument Illegal");
+		}
+		securityRoleService.save(role);
 	}
 
 	public void updateSecurityRoleService(SecurityRoleUpdateRequest request) {
-		createSecurityRoleService(request);
+		SecurityRole role = convertRequest2Entity(request);
+		if (role.getId() == null) {
+			logger.error("Argument Illegal {}.", role);
+			throw new IllegalArgumentException("Argument Illegal");
+		}
+		securityRoleService.save(role);
 	}
 
 	public SecurityRoleDTO findRoleById(Long id) {
 		SecurityRole role = securityRoleDao.findOne(id);
 		return BeanMapper.map(role, SecurityRoleDTO.class);
 	}
-	
-	public AbstractPageResponse<SecurityRoleDTO> searchRole(AbstractPageRequest request){
+
+	public AbstractPageResponse<SecurityRoleDTO> searchRole(AbstractPageRequest request) {
 		Page<SecurityRole> pageOfRole = securityRoleService.search(request);
 		AbstractPageResponse<SecurityRoleDTO> response = new AbstractPageResponse<>();
 		response.setTotalElements(pageOfRole.getTotalElements());

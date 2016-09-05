@@ -23,7 +23,7 @@ public class SecurityUser extends IDEntity {
 	private Date lastLogin;
 
 	// ========================================================================================
-	@ManyToMany(cascade = { CascadeType.REFRESH }, fetch=FetchType.EAGER)
+	@ManyToMany(cascade = { CascadeType.REFRESH }, fetch = FetchType.EAGER)
 	private Set<SecurityRole> roles = null;
 	// ========================================================================================
 

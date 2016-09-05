@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.ManyToMany;
 
+import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.mel.framework.IDEntity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -21,7 +22,7 @@ public class SecurityRole extends IDEntity {
 	@JsonIgnore
 	private Set<SecurityUser> users = null;
 
-	@ManyToMany(cascade = CascadeType.REFRESH, fetch=FetchType.EAGER)
+	@ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 	private Set<SecurityRight> rights = null;
 	// =================================================================
 
@@ -62,7 +63,8 @@ public class SecurityRole extends IDEntity {
 
 	@Override
 	public String toString() {
-		return "SecurityRole [name=" + name + ", description=" + description + ", rights=" + rights + "]";
+		return ToStringBuilder.reflectionToString(this);
 	}
+
 
 }
