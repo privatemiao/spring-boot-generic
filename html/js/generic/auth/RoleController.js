@@ -2,8 +2,8 @@ materialAdmin.controller('RoleController', function($scope, UserService) {
 	var variables = {
 		// 从后台拿到的全部节点
 		ALL_NODES : [],
-		// 全部节点扁平化数据，用于查找
-		ALL_NODES_FLAT : {}
+		// 节点索引
+		NODE_INDEX : {}
 	};
 
 	// 本地服务类
